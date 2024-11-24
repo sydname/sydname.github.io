@@ -1,0 +1,12 @@
+---
+layout: post
+title: 이게뭐3
+date: 2024-11-24 19:48:20 +0900
+description: easy. # Add post description (optional)
+img: image.jpg # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [start, 1st]
+---
+# What's going on this page
+
+* c'est un chemin ramene a une page magnifique github io. desormais ca court.s
