@@ -1,0 +1,26 @@
+---
+layout: post
+title: ros2 / cass_project
+date: 2024-12-06 00:25:24 +0900
+description: aie_ros_course / on_going_dl_project / cpp_study # Add post description (optional)
+img:  # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [ros2, deeplearning]
+---
+# What's going on this page
+
+* ros2 package 발행하는 법 / class oop programming /
+  * node 사이에 주고받는 데이터가 topic임
+  * subscriber(listener) <-> publisher(talker)
+  * colcon build를 해줘야지 수정한게 반영이 된다. simlist install? 을 하면 자동으로 연결된다?
+  * source install bash 로 환경설정 (alias 설정하기)
+  * 터미널 명령어 shell 명령어 어렵다
+
+* project architecting / jira issue 관리 / 큰 그림 멀리보기 (확장성)
+* 우선순위 세우기. 일정예측하기. 팀원파악 / 끌어가기 / 한 말은 지키기 / 지킬 수 있는 말을 하기
+* 뭐적으려했는지 까먹었
+
+* cpp_study
+  * cout cin iostream
+  * \n endl
+  * 30분정도 진행함. 꾸준히해라.
