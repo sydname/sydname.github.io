@@ -1,0 +1,39 @@
+---
+layout: post
+title: ros2 / cass_project
+date: 2024-12-10 10:38:24 +0900
+description: aie_ros_course / on_going_dl_project
+img:  # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [ros2, deeplearning]
+---
+# What's going on this page
+
+* ros2 action / parameter
+  * quantile_time, almost_goal_time
+  * declare_parameter
+  * get_parameters
+  * from rcl_interfaces.msg import SetParameterResult 로 실시간업데이트 가능
+  * parameter_callback 함수 생성해서 return 에 임포트한 모듈 넣어주면됨
+  * callback 함수는 대체 뭐지 
+  * callback group...
+  * 함수에 params 변수를 받아오고 param.name param.value로 가져올수가있음
+  
+* ros2 log ? print?
+  * class init에  get_logger().info('qqch a parle')
+  * 프린트로 터미널에서 보는것보다 훨씬 간결하고 좋음. 타임스탬프! (아이디가 아니고 타임스탬프였다) 
+  * rqt에서 plugin > log 에서 확인가능. 타임스탬프는 자동으로 인코딩되어서 시간으로 나옴
+  
+* ros2 rosbag
+  * ros2 bag record -o name -a
+  * ros2 bag play name
+  * rcl_interfaces.msgs / parmeterdescriptor
+
+* ros2 roslaunch
+  * 노드 두개 동시 런 가능...
+  * 파이프라인같은느낌?
+  * setup.py data_files에 추가해줘야함. 파일 형식도 알려줘야~ (node들은 entry_points에 파일을 추가해줬다)
+  * namespace에 맞춰서 퍼블리셔의 주소도 맞춰줘야함. 
+  
+* bash......,...,.,.,....,.,..,.,.,.,.,.,.,.,.,.,.,
+

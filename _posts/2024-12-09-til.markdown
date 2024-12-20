@@ -1,0 +1,37 @@
+---
+layout: post
+title: ros2 / cass_project
+date: 2024-12-09 00:25:24 +0900
+description: aie_ros_course / on_going_dl_project
+img:  # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [ros2, deeplearning]
+---
+# What's going on this page
+
+* ros2 srv / multispawn
+  * request / result / feedback 으로 구성
+  * package msgs에서 type-interface를 짜고 그거를 import 해온다
+  * interface 만들면 또 어떤 파일을 수정해야하지?
+  * request 를 넣으면 result가 나오는 방식
+  * 첨에는 result가 비어있음 execute callback
+  * callback_service 구현을 통해서 result 값을 생성 한 뒤 내뱉는다
+  * client 랑 연결해서 행동을 만들어냄
+  
+* ros2 action / dist turtle 
+  * 그래서 액션과 토픽이랑 뭐가다른걸까
+  * 액션 서버를 만들수가있음
+  * 액션도 request / result / feedback
+  * feedback 을 보려면 쉘명령어에 --feedback 파라미터를 줘야지된다
+  * 빌드 까먹지 말아야
+  * 새로운 파일 생성하면 엔트리포인트도 수정 (setup.py)
+  * send_goal ..?
+  * almosts goal??
+  
+* ros2 multithread
+  * executors import multithreadedexecutor... 
+  * 엑션 콜백과 sub 콜백을 동시에 돌리려고!
+  
+* dl_project
+  * 2차 통합 테스트?
+  * db
