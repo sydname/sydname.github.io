@@ -1,0 +1,17 @@
+---
+layout: post
+title: ros2
+date: 2025-1-2 09:34:25 +0900
+description: aie_ros_course / cpp_study
+img:  # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [ros2]
+---
+# What's going on this page
+
+* wbs (work breakdown structure)
+ * 업무 분류 체계.
+ * 해야 할 업무를 카테고리로 구분하고 각각의 카테고리는 좀 더 세부적인 작업으로 나누어서, 일정 및 진행사항을 체크하는 기법
+
+* ros2 openCv, CvBridge
+ *

@@ -1,0 +1,33 @@
+---
+layout: post
+title: RFID
+date: 2025-01-07 19:19:25 +0900
+description: aie_embedded_course / cpp
+img:  # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [embedded, rfig, cpp, arduino]
+---
+# What's going on this page
+
+* cpp import file
+  * header > 모양만 잡아주는거
+  * cpp > 구현 내용
+  * hpp > 둘다 합쳐둔거
+
+* cpp List<type>
+  * List<MFRC522::Uid>
+  * MFRC522 의 Uid 구조를 가진 타입만 리스트에 넣을수잇다
+
+* cpp Bytedata printing
+  * Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "); //1자리인 애들은 0을 붙여서 가독성
+  * Serial.print(mfrc522.uid.uidByte[i], HEX); // 16진수로 변경
+
+* cpp reference
+  * String& -> 를 변수로 넣어주면 함수에서만 존재하는 새로운 인자가 아니라 선언했었던 data의 주소를 넣는거!
+  * 그래서 함수 내부에서 그 data의 메모리에 써지는것.
+
+* cpp mem_fn
+  * memcmp(ptr1, ptr2, size_t num) compare => 0(true)/1(false)
+  * memcpy(dst*, src*, size_t num) copy memory block
+  * memset(ptr*, value, size_t num) set empty memory block with data
+  * memchr find_character

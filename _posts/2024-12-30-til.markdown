@@ -1,0 +1,59 @@
+---
+layout: post
+title: ros2 + cpp_stl
+date: 2024-12-30 13:25:25 +0900
+description: aie_ros_course / cpp_study
+img:  # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [ros2, os, cpp]
+---
+# What's going on this page
+
+* ros2 odometry ; 주행기록계
+ * 양쪽 바퀴가 회전한 양에 따라 로봇이 어디에 가있을지 계산하는 기법
+ * 모터에 달린 엔코더를 통해 거리를 측정하고 엔코더값-거리를 통해 위치를 추정
+ * 바퀴 각도와 거리를 이용해 위치를 알 수 있음!
+ * 각 바퀴가 다른 라디안값으로 돌아야함. 그 값을 분배해주는게 control system  (지령을 내리는거)
+ * rad/sec 그 값까지 점차적으로 증가시키는게 motor drivers
+ * diff_drive_controller?
+ 
+ * earth frame
+  * 여러대의 로봇이 서로 다른 map위에 존재할 수 있도록 각 층의 정보를 가질 수 있게 해줌
+ * map frame
+  * world fixed frame / earth frame에 고정된 프레임
+  * 연속적이지 않아서 로봇이 순간이동하는것처럼 보일수도 있지만 장기간 global reference로 사용하기 좋다
+ * odom frame
+  * world fixed frame / earth frame에 고정된 프레임
+  * 음직일때 drift 발생 / 그래도 부드럽게 움직일 수 있도록 해준다 / 단기간 local reference로서 좋음 
+  
+* ros2 slam / navigation
+ * slam 에서 중요한건 ** localization, mapping **
+ * 지도를 만들고 그 지도에서 내 위치를 아는 것
+ * 기존에 있는 맵을 사용하고 resolution을 정확히 지정해주면 직접 slam으로 map을 생성할 필요는 없다.
+ * composable node
+ * amsl / adaptive monte carlo localization?
+ * cost map > 다양한 모드를 사용하여 시나리오를 잘 짜야.
+ * odom은 항상 틀린다
+ * life cycle manager
+ 
+* ros2 msg/topic/node debugging
+ * 셋의 개념과 관계를 잘 알아야겠다.
+ * 토픽과 노드가 어떤 상태인지, 오류가 나면 일단 확인해보기. 어디에서 문제가 생겼나
+ * 터미널과 터미널이 잘 연결되어 있는지도.
+ * 파일들을 마구 만들고 무작정 따라하는게 아니라 서로 어떻게 연결되어 있는지 유기적 관계를 파악해야 구조를 알 수가 있을듯.
+ 
+* Q
+ * world 개념은 뭘까
+  * model은 말 그대로 모델링 파일들 
+  * world는 각 모델들의 위치, 모델 간의 관계등을 기술해 월드를 구성할 수 있음
+  * launch.xml에서 set env로 모델을 불러오는 경로를 지정하는 환경변수를 설정 가능
+ * ament / cmake
+ * 공분산행렬
+ * behavior tree
+ * yaml 파일은 indent가 중요하다...
+
+* OS / process / thread
+ * process status
+  * new > ready(<>wait) <> run > exit
+  
+ 
