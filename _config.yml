@@ -2,11 +2,11 @@ title: Young KIM
 description: > # this means to ignore newlines until "baseurl:"
   too young to do nothing
 permalink: ':title/'
-baseurl: "/too_young_too_die" # the subpath of your site, e.g. /blog
-url: "sydname.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: #if your site has a twitter account, enter it here
-remote_theme: artemsheludko/flexible-jekyll
-theme: flexible-jekyll
+baseurl: "/sydname" # the subpath of your site, e.g. /blog
+url: "http://sydname.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# site-twitter: #if your site has a twitter account, enter it here
+# remote_theme: artemsheludko/flexible-jekyll
+# theme: flexible-jekyll
 
 # Author Settings
 author: Soyoung KIM # add your name
